@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Data from './Data'
 import './App.css';
 
 function App() {
@@ -17,10 +18,11 @@ function App() {
 
   return (
     <div className="App">
-       <form onSubmit={event => handleSubmit(event)}>
-              <h2>Enter a Github username:</h2>
-              <input type="text" name="githubUsername" onChange={event => setGithubUsername(event.target.value)} value={githubUsername} />
-          </form>
+        <form onSubmit={event => handleSubmit(event)}>
+            <h2>Enter a Github username:</h2>
+            <input type="text" name="githubUsername" onChange={event => setGithubUsername(event.target.value)} value={githubUsername} />
+        </form>
+        <Data userInfo={user}/>
     </div>
   );
 }
